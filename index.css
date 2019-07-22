@@ -1,0 +1,254 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+box-sizing: border-box
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+html {
+box-sizing:border-box
+}
+* {
+box-sizing:inherit
+}
+
+.outer-container {
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-container {
+  z-index: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top right, rgb(189, 189, 189) 0 calc(50% - 4px), rgb(237, 147, 0) calc(50% - 4px) calc(50% + 4px), rgb(189, 189, 189) calc(50% + 4px) 100%);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.main-container:before, .main-container:after, .main-container>:first-child:before, .main-container>:first-child:after {
+    position: absolute;
+    width: 80px; height: 80px;
+    border: solid 6px black;
+    content: ' ';
+}
+.main-container:before {
+  top:0;left:0;border-width: 6px 0 0 6px
+}
+.main-container:after {
+  top:0;right:0;border-width: 6px 6px 0 0
+}
+.main-container>:first-child:before {
+  bottom:0;right:0;border-width: 0 6px 6px 0
+}
+.main-container>:first-child:after {
+  bottom:0;left:0;border-width: 0 0 6px 6px
+}
+
+.small-slash {
+    background: linear-gradient(to bottom right, rgb(190, 189, 189) 0 calc(50% - 4px), rgb(255, 255, 255) calc(50% - 4px) calc(50% + 4px), rgb(189, 189, 189) calc(50% + 4px) 100%);
+    width: 52%;
+    height: 50%;
+    position: absolute;
+    margin: auto;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.large-text {
+  font-size: calc(0.9vw + 1.6vh);
+  font-family: 'Roboto';
+  margin: 9px;
+  position: absolute;
+  text-align: center;
+}
+
+.small-text {
+    font-size: 15px;
+    font-family: 'Roboto';
+    text-align: center;
+}
+
+#x-position {
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+}
+
+#y-position {
+    bottom: -15px;
+    top: -15px;
+    position: absolute;
+    width: 100%;
+    transform: rotate(-90deg);
+}
+
+.width {
+  top: 0;
+  margin: 9px auto 0 auto;
+  left: 0;
+  right: 0;
+
+}
+
+
+.height {
+    transform: rotate(90deg);
+    width: 100vh;
+    top: 0;
+    bottom: 2%;
+    margin: auto;
+    right: 0;
+}
+
+.circle {
+z-index: 2;
+  width: 40vw;
+  height: auto;
+  -webkit-animation: spin 12s linear infinite;
+  -moz-animation: spin 12s linear infinite;
+  animation: spin 12s linear infinite;
+}
+
+.follow {
+  cursor: none;
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  z-index: 4;
+}
+
+.follow::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: black;
+    height: 4px;
+    margin-top: -2px;
+    top: 50%;
+    left: 2px;
+    right: 2px;
+}
+
+.follow::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: black;
+    width: 4px;
+    margin-left: -2px;
+    left: 50%;
+    top: 2px;
+    bottom: 2px;
+}
+
+#centered {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+#logo {
+    width: 20vw;
+    height: auto;
+    margin: -20px auto 30px auto;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+    color: rgb(85, 85, 85);
+    font-size: calc(0.7vw + 1.2vh);
+    font-weight: 700;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@media (max-width: 1024px) {
+    .circle {
+        width: 40vh;
+    }
+    #logo {
+        width: 20vh;
+    }
+    .small-text {
+        font-size: 10px;
+    }
+    #x-position {
+        bottom: -9px;
+    }
+    
+    #y-position {
+        bottom: -9px;
+        top: -9px;
+    }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .circle {
+        width: 40vw;
+    }
+    #logo {
+        width: 20vw;
+    }
+}
+
