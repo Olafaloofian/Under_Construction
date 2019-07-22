@@ -138,17 +138,16 @@ box-sizing:inherit
   margin: 9px auto 0 auto;
   left: 0;
   right: 0;
-
 }
 
 
 .height {
-    transform: rotate(90deg);
-    width: 100vh;
-    top: 0;
-    bottom: 2%;
-    margin: auto;
-    right: 0;
+  transform: rotate(90deg);
+  width: 50vh;
+  top: 22%;
+  bottom: 30%;
+  margin: 0 auto;
+  right: 0;
 }
 
 .circle {
