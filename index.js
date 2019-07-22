@@ -4,6 +4,7 @@ let screenWidth = null
 let screenHeight = null
 
 const getMousePosition = (e) => {
+    e.preventDefault()
     xPosition = e.clientX
     yPosition = e.clientY
     const followElement = document.getElementById('follow')
@@ -23,4 +24,6 @@ const getScreenSize = (e) => {
 window.addEventListener('load', getScreenSize)
 window.addEventListener('resize', getScreenSize)
 window.addEventListener('mousemove', getMousePosition)
+window.addEventListener('touchstart', getMousePosition)
 window.addEventListener('touchmove', getMousePosition)
+window.addEventListener('touchend', getMousePosition)
