@@ -11,8 +11,6 @@ const getMousePosition = (e) => {
     followElement.style.left = (xPosition - 35) + 'px'
     document.getElementById('x-position').innerText = xPosition
     document.getElementById('y-position').innerText = `${screenHeight - yPosition}`
-    
-
 }
 
 const getScreenSize = (e) => {
@@ -25,3 +23,4 @@ const getScreenSize = (e) => {
 window.addEventListener('load', getScreenSize)
 window.addEventListener('resize', getScreenSize)
 window.addEventListener('mousemove', getMousePosition)
+window.addEventListener('touchmove', getMousePosition)
