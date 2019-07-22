@@ -142,11 +142,10 @@ box-sizing:inherit
 
 
 .height {
-  transform: rotate(90deg);
-  width: 50vh;
-  top: 22%;
-  bottom: 30%;
-  margin: 0 auto;
+  writing-mode: vertical-rl;
+  top: 0;
+  bottom: 0;
+  margin: auto 9px 0 auto;
   right: 0;
 }
 
